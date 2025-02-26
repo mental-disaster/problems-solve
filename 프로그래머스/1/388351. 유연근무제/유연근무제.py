@@ -1,0 +1,2 @@
+def solution(schedules, timelogs, startday):
+    return sum([0 not in [1 if i == (6-startday)%7 or i == (7-startday)%7 or t <= (sch+10 if sch%100 < 50 else sch+50) else 0 for i,t in enumerate(tl)] for sch, tl in zip(schedules, timelogs)])
